@@ -7,6 +7,7 @@ The repository also includes some public roms in the ROMS directory.
 # Compiling and Running
 
 This repository includes SDL2 so the only thing needed to compile is gcc and preferably make.
+
 **Compile:**
 
     make all
