@@ -20,4 +20,4 @@ stepping : $(OBJS)
 	$(CC) $(OBJS) $(INCLUDE_PATHS) $(LIBRARY_PATHS) $(COMPILER_FLAGS) -DSTEPPING $(LINKER_FLAGS) -o $(OBJ_NAME)
 
 clean :
-	del main.exe
+	del chip8.exe
