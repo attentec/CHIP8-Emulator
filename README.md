@@ -20,7 +20,7 @@ This repository includes SDL2 so the only thing needed to compile is gcc and pre
 
 The CHIP-8 uses a 16-key hexadecimal keypad with the following layout:
 
-    _________
+    ---------
     |1|2|3|C|
     |4|5|6|D|
     |7|8|9|E|
@@ -29,7 +29,7 @@ The CHIP-8 uses a 16-key hexadecimal keypad with the following layout:
 
 The emulator uses the following keyboard layout to match this:
 
-    _________
+    ---------
     |1|2|3|4|
     |Q|W|E|R|
     |A|S|D|F|
