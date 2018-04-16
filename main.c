@@ -21,7 +21,7 @@ SDL_Event event;
 
 LARGE_INTEGER performanceCounterFrequency;
 
-static inline uint64_t GetUsTime()
+static inline uint64_t GetUsTime(void)
 {
   LARGE_INTEGER li;
   QueryPerformanceCounter(&li);
@@ -30,7 +30,7 @@ static inline uint64_t GetUsTime()
   return (uint64_t)(li.QuadPart / performanceCounterFrequency.QuadPart);
 }
 
-bool InitSDL()
+bool InitSDL(void)
 {
   if (SDL_Init(SDL_INIT_VIDEO) != 0) return false;
   if (SDL_CreateWindowAndRenderer(WINDOW_WIDTH*4, WINDOW_HEIGHT*4, 0, &window, &renderer) != 0) return false;

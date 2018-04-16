@@ -10,9 +10,9 @@
 #include "SDL.h"
 #include "stdbool.h"
 
-extern void Chip8Initialize();
+extern void Chip8Initialize(void);
 extern bool Chip8LoadROM(const char * const romPath);
-extern void Chip8Cycle();
+extern void Chip8Cycle(void);
 extern void Chip8CycleTimerInterrupts();
 extern void Chip8Draw(SDL_Renderer * const renderer);
 extern void Chip8KeyDown(const unsigned char key);

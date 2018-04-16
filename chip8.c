@@ -45,7 +45,7 @@ unsigned char soundTimer;
 unsigned short I;
 unsigned short pc;
 
-void Chip8Initialize()
+void Chip8Initialize(void)
 {
   for (int i = 0; i < 4096; ++i) {
     memory[i] = 0U;
@@ -102,7 +102,7 @@ bool Chip8LoadROM(const char * const romPath)
   return true;
 }
 
-void Chip8Cycle()
+void Chip8Cycle(void)
 {
   unsigned short opcode = (memory[pc] << 8) | memory[pc + 1];
 
