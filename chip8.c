@@ -104,18 +104,18 @@ bool Chip8LoadROM(const char * const romPath)
 
 void Chip8Cycle(void)
 {
-  unsigned short opcode = (memory[pc] << 8) | memory[pc + 1];
+  const unsigned short opcode = (memory[pc] << 8) | memory[pc + 1];
 
   /* 0x0NNN */
-  unsigned short NNN = opcode & 0x0FFF;
+  const unsigned short NNN = opcode & 0x0FFF;
   /* 0x00NN */
-  unsigned short NN  = opcode & 0x00FF;
+  const unsigned short NN  = opcode & 0x00FF;
   /* 0x000N */
-  unsigned short N   = opcode & 0x000F;
+  const unsigned short N   = opcode & 0x000F;
   /* 0x0X00 */
-  unsigned char  X   = (opcode & 0x0F00) >> 8;
+  const unsigned char  X   = (opcode & 0x0F00) >> 8;
   /* 0x00Y0 */
-  unsigned char  Y   = (opcode & 0x00F0) >> 4;
+  const unsigned char  Y   = (opcode & 0x00F0) >> 4;
 
 #ifdef STEPPING
   system("cls");
